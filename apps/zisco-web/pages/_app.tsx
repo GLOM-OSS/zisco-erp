@@ -1,15 +1,23 @@
+import { ThemeProvider } from '@emotion/react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import '../public/styles/global.scss';
+import '../public/styles/notifGlobalStyles.css';
+import '../public/styles/phoneNumberStyles.css';
+import '../public/styles/reset.css';
+import '../public/styles/root.scss';
+import { theme } from '../utils/theme';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to zisco-web!</title>
+        <title>ZiscoERP - Powerful HR, Accounting, CRM System</title>
       </Head>
       <main className="app">
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </main>
     </>
   );
