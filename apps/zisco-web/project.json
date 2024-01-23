@@ -57,7 +57,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "npx openapi-typescript https://erp-be.onrender.com/ --output "
+          "npx openapi-typescript https://erp-be.onrender.com/-json --output libs/data-types/src/lib/docs.ts"
         ]
       }
     }
