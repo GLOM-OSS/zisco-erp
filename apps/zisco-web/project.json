@@ -52,6 +52,14 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
+    },
+    "swagger": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npx openapi-typescript https://erp-be.onrender.com/ --output "
+        ]
+      }
     }
   },
   "tags": []
